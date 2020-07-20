@@ -1,6 +1,7 @@
 import React from "react";
 import  { mount } from "enzyme";
 import Footer from "../../components/Footer";
+import { create } from 'react-test-renderer';
 
 describe('<Footer />', () =>{
     const footer = mount(<Footer />);
@@ -15,3 +16,10 @@ describe('<Footer />', () =>{
     
     
 })
+describe ('Footer Snaspshot',()=>{
+    test('Comprobar la UI del componente de Footer',()=>{
+        const footer = create (<Footer />);
+        expect(footer.toJSON()).toMatchSnapshot();
+    })
+
+});

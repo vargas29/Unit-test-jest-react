@@ -59,18 +59,20 @@
     "eslint-plugin-react": "^7.14.3",
     "jest": "^26.1.0",
     "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.1",
     "webpack-dev-server": "^3.9.0"
   },
   "bugs": {
     "url": "https://github.com/gndx/platzi-store/issues"
   },
   "homepage": "https://github.com/gndx/platzi-store/#readme",
-  "jest" :{
-    "setupFilesAfterEnv" : [
+  "jest": {
+    "verbose":true,
+    "setupFilesAfterEnv": [
       "<rootDir>/src/_test_/setupTest.js"
     ],
-    "moduleNameMapper":{
-       "\\.(styl|css)$":"<rootDir>/src/_mocks_/styleMock.js"
+    "moduleNameMapper": {
+      "\\.(styl|css)$": "<rootDir>/src/_mocks_/styleMock.js"
     }
   }
 }
